@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change the Color of text</title>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // we can use any argument name for fucntion we took "b" here... we can also name it button or something else 
+
+            // when we wirte queryselctor of All its gets all queries for that perticular tag in a array format
+
+            //
+              document.querySelectorAll('button').forEach(b => {
+                b.onclick = function() {
+                    document.querySelector('#hello').style.color = b.dataset.color;
+                    document.querySelector('#hello').innerHTML = b.dataset.name;
+                }
+              })
+        })
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello!</h1>
+    <h2 id="test"></h2>
+    <button data-color="red" data-name="I am RED"> Red </button>
+    <button  data-color="blue" data-name="I am Blue"> Blue </button>
+    <button data-color="green" data-name="I am GREEN"> Green </button>
+
+</body>
+</html>
