@@ -9,18 +9,15 @@
         if (!localStorage.getItem('counter')) {
             localStorage.setItem('counter', 0);
         }
-        
         function count(){
             counter++;
             document.querySelector('h1').innerHTML = counter;
         }
-
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('button').onclick = count;
             // 1000 mijlisecond is 1 sec
             setInterval(count, 1000)
         })
-
     </script>
 </head>
 <body>
